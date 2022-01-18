@@ -1,0 +1,810 @@
+<Activity mc1:Ignorable="sap1 sap2010 sads1" x:Class="New_Workflow" sap2010:WorkflowViewState.IdRef="New_Workflow_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:m="clr-namespace:ManagedSSPI;assembly=System.Net.WebSockets.Client.Managed"
+ xmlns:m1="clr-namespace:MSHTML;assembly=OpenRPA.IE"
+ xmlns:mc="clr-namespace:Microsoft.CSharp;assembly=System"
+ xmlns:mc1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:mss="clr-namespace:Microsoft.SqlServer.Server;assembly=System.Data"
+ xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System"
+ xmlns:mv1="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:mva1="clr-namespace:Microsoft.VisualBasic.ApplicationServices;assembly=Microsoft.VisualBasic"
+ xmlns:mvax="clr-namespace:Microsoft.VisualBasic.Activities.XamlIntegration;assembly=System.Activities"
+ xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic"
+ xmlns:mvd="clr-namespace:Microsoft.VisualBasic.Devices;assembly=Microsoft.VisualBasic"
+ xmlns:mvf="clr-namespace:Microsoft.VisualBasic.FileIO;assembly=Microsoft.VisualBasic"
+ xmlns:mvl="clr-namespace:Microsoft.VisualBasic.Logging;assembly=Microsoft.VisualBasic"
+ xmlns:mvm="clr-namespace:Microsoft.VisualBasic.MyServices;assembly=Microsoft.VisualBasic"
+ xmlns:mvmi="clr-namespace:Microsoft.VisualBasic.MyServices.Internal;assembly=Microsoft.VisualBasic"
+ xmlns:mw="clr-namespace:Microsoft.Win32;assembly=mscorlib"
+ xmlns:mw1="clr-namespace:Microsoft.Win32;assembly=System"
+ xmlns:mws="clr-namespace:Microsoft.Win32.SafeHandles;assembly=mscorlib"
+ xmlns:mws1="clr-namespace:Microsoft.Win32.SafeHandles;assembly=System.Core"
+ xmlns:mws2="clr-namespace:Microsoft.Win32.SafeHandles;assembly=System"
+ xmlns:o="clr-namespace:OpenRPA;assembly=OpenRPA"
+ xmlns:o1="clr-namespace:OpenRPA;assembly=OpenRPA.Interfaces"
+ xmlns:oa="clr-namespace:OpenRPA.Activities;assembly=OpenRPA"
+ xmlns:oi="clr-namespace:OpenRPA.Input;assembly=OpenRPA.Interfaces"
+ xmlns:oi1="clr-namespace:OpenRPA.Interfaces;assembly=OpenRPA.Interfaces"
+ xmlns:oi2="clr-namespace:OpenRPA.IE;assembly=OpenRPA.IE"
+ xmlns:oi3="clr-namespace:OpenRPA.Image;assembly=OpenRPA.Image"
+ xmlns:oie="clr-namespace:OpenRPA.Interfaces.entity;assembly=OpenRPA.Interfaces"
+ xmlns:oii="clr-namespace:OpenRPA.Interfaces.IPCService;assembly=OpenRPA.Interfaces"
+ xmlns:oii1="clr-namespace:OpenRPA.Interfaces.Input;assembly=OpenRPA.Interfaces"
+ xmlns:oii2="clr-namespace:OpenRPA.Interfaces.Image;assembly=OpenRPA.Interfaces"
+ xmlns:oim="clr-namespace:OpenRPA.Interfaces.mq;assembly=OpenRPA.Interfaces"
+ xmlns:oio="clr-namespace:OpenRPA.Interfaces.Overlay;assembly=OpenRPA.Interfaces"
+ xmlns:oip="clr-namespace:OpenRPA.Image.PrintCapture;assembly=OpenRPA.Image"
+ xmlns:oir="clr-namespace:OpenRPA.Interfaces.Resources;assembly=OpenRPA.Interfaces"
+ xmlns:oir1="clr-namespace:OpenRPA.IE.Resources;assembly=OpenRPA.IE"
+ xmlns:oir2="clr-namespace:OpenRPA.Image.Resources;assembly=OpenRPA.Image"
+ xmlns:ois="clr-namespace:OpenRPA.Interfaces.Selector;assembly=OpenRPA.Interfaces"
+ xmlns:oiv="clr-namespace:OpenRPA.Interfaces.Views;assembly=OpenRPA.Interfaces"
+ xmlns:oiv1="clr-namespace:OpenRPA.IE.Views;assembly=OpenRPA.IE"
+ xmlns:oiv2="clr-namespace:OpenRPA.Image.Views;assembly=OpenRPA.Image"
+ xmlns:oiw="clr-namespace:OpenRPA.Interfaces.win32;assembly=OpenRPA.Interfaces"
+ xmlns:on="clr-namespace:OpenRPA.NM;assembly=OpenRPA.NM"
+ xmlns:ona="clr-namespace:OpenRPA.NM.Activities;assembly=OpenRPA.NM"
+ xmlns:onp="clr-namespace:OpenRPA.NM.pipe;assembly=OpenRPA.NM"
+ xmlns:onr="clr-namespace:OpenRPA.NM.Resources;assembly=OpenRPA.NM"
+ xmlns:ons="clr-namespace:OpenRPA.NM.Snippets;assembly=OpenRPA.NM"
+ xmlns:ons1="clr-namespace:OpenRPA.NM.Snippets;assembly=OpenRPA.IE"
+ xmlns:onv="clr-namespace:OpenRPA.NM.Views;assembly=OpenRPA.NM"
+ xmlns:or="clr-namespace:OpenRPA.Resources;assembly=OpenRPA"
+ xmlns:os="clr-namespace:OpenRPA.Store;assembly=OpenRPA"
+ xmlns:ou="clr-namespace:OpenRPA.Utilities;assembly=OpenRPA.Utilities"
+ xmlns:ov="clr-namespace:OpenRPA.Views;assembly=OpenRPA"
+ xmlns:ov1="clr-namespace:OpenRPA.ViewModel;assembly=OpenRPA"
+ xmlns:p="clr-namespace:XamlGeneratedNamespace;assembly=OpenRPA"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:s1="clr-namespace:System;assembly=System.Core"
+ xmlns:s10="clr-namespace:System;assembly=System.Runtime.WindowsRuntime"
+ xmlns:s11="clr-namespace:System;assembly=System.Globalization.Extensions"
+ xmlns:s12="clr-namespace:SHDocVw;assembly=OpenRPA.IE"
+ xmlns:s2="clr-namespace:System;assembly=System"
+ xmlns:s3="clr-namespace:System;assembly=System.Memory"
+ xmlns:s4="clr-namespace:System;assembly=Microsoft.Bcl.AsyncInterfaces"
+ xmlns:s5="clr-namespace:System;assembly=Microsoft.Bcl.HashCode"
+ xmlns:s6="clr-namespace:System;assembly=System.ValueTuple"
+ xmlns:s7="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:s8="clr-namespace:System;assembly=System.ComponentModel.Composition"
+ xmlns:s9="clr-namespace:System;assembly=System.Net.WebSockets.Client.Managed"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sad="clr-namespace:System.Activities.DynamicUpdate;assembly=System.Activities"
+ xmlns:sad1="clr-namespace:System.Activities.Debugger;assembly=System.Activities"
+ xmlns:sad2="clr-namespace:System.Activities.DurableInstancing;assembly=System.Activities"
+ xmlns:sads="clr-namespace:System.Activities.Debugger.Symbol;assembly=System.Activities"
+ xmlns:sads1="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sae="clr-namespace:System.Activities.Expressions;assembly=System.Activities"
+ xmlns:sae1="clr-namespace:System.Activities.ExpressionParser;assembly=System.Activities"
+ xmlns:sah="clr-namespace:System.Activities.Hosting;assembly=System.Activities"
+ xmlns:sap="clr-namespace:System.Activities.Persistence;assembly=System.Activities"
+ xmlns:sap1="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sas="clr-namespace:System.Activities.Statements;assembly=System.Activities"
+ xmlns:sast="clr-namespace:System.Activities.Statements.Tracking;assembly=System.Activities"
+ xmlns:sat="clr-namespace:System.Activities.Tracking;assembly=System.Activities"
+ xmlns:sav="clr-namespace:System.Activities.Validation;assembly=System.Activities"
+ xmlns:sax="clr-namespace:System.Activities.XamlIntegration;assembly=System.Activities"
+ xmlns:sb="clr-namespace:System.Buffers;assembly=System.Memory"
+ xmlns:sbb="clr-namespace:System.Buffers.Binary;assembly=System.Memory"
+ xmlns:sbt="clr-namespace:System.Buffers.Text;assembly=System.Memory"
+ xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib"
+ xmlns:sc1="clr-namespace:System.Configuration;assembly=System"
+ xmlns:sc2="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:sc3="clr-namespace:System.CodeDom;assembly=System"
+ xmlns:sca="clr-namespace:System.Configuration.Assemblies;assembly=mscorlib"
+ xmlns:scc="clr-namespace:System.Collections.Concurrent;assembly=mscorlib"
+ xmlns:scc1="clr-namespace:System.Collections.Concurrent;assembly=System"
+ xmlns:scc2="clr-namespace:System.CodeDom.Compiler;assembly=System"
+ xmlns:scc3="clr-namespace:System.ComponentModel.Composition;assembly=System.ComponentModel.Composition"
+ xmlns:scch="clr-namespace:System.ComponentModel.Composition.Hosting;assembly=System.ComponentModel.Composition"
+ xmlns:sccp="clr-namespace:System.ComponentModel.Composition.Primitives;assembly=System.ComponentModel.Composition"
+ xmlns:sccr="clr-namespace:System.ComponentModel.Composition.ReflectionModel;assembly=System.ComponentModel.Composition"
+ xmlns:scd="clr-namespace:System.ComponentModel.Design;assembly=System"
+ xmlns:scds="clr-namespace:System.ComponentModel.Design.Serialization;assembly=System"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.Core"
+ xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System"
+ xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=Microsoft.Bcl.AsyncInterfaces"
+ xmlns:scg4="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel"
+ xmlns:sci="clr-namespace:System.Collections.Immutable;assembly=System.Collections.Immutable"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sco1="clr-namespace:System.Collections.ObjectModel;assembly=System"
+ xmlns:scs="clr-namespace:System.Collections.Specialized;assembly=System"
+ xmlns:sd="clr-namespace:System.Diagnostics;assembly=mscorlib"
+ xmlns:sd1="clr-namespace:System.Dynamic;assembly=System.Core"
+ xmlns:sd2="clr-namespace:System.Diagnostics;assembly=System.Core"
+ xmlns:sd3="clr-namespace:System.Diagnostics;assembly=System"
+ xmlns:sd4="clr-namespace:System.Data;assembly=System.Data"
+ xmlns:sdc="clr-namespace:System.Diagnostics.Contracts;assembly=mscorlib"
+ xmlns:sdc1="clr-namespace:System.Diagnostics.CodeAnalysis;assembly=mscorlib"
+ xmlns:sdc2="clr-namespace:System.Diagnostics.CodeAnalysis;assembly=System"
+ xmlns:sdc3="clr-namespace:System.Data.Common;assembly=System.Data"
+ xmlns:sdci="clr-namespace:System.Diagnostics.Contracts.Internal;assembly=mscorlib"
+ xmlns:sde="clr-namespace:System.Diagnostics.Eventing;assembly=System.Core"
+ xmlns:sder="clr-namespace:System.Diagnostics.Eventing.Reader;assembly=System.Core"
+ xmlns:sdi="clr-namespace:System.Deployment.Internal;assembly=mscorlib"
+ xmlns:sdo="clr-namespace:System.Data.OleDb;assembly=System.Data"
+ xmlns:sdo1="clr-namespace:System.Data.Odbc;assembly=System.Data"
+ xmlns:sdp="clr-namespace:System.Diagnostics.PerformanceData;assembly=System.Core"
+ xmlns:sds="clr-namespace:System.Diagnostics.SymbolStore;assembly=mscorlib"
+ xmlns:sds1="clr-namespace:System.Data.Sql;assembly=System.Data"
+ xmlns:sds2="clr-namespace:System.Data.SqlTypes;assembly=System.Data"
+ xmlns:sds3="clr-namespace:System.Data.SqlClient;assembly=System.Data"
+ xmlns:sdt="clr-namespace:System.Diagnostics.Tracing;assembly=mscorlib"
+ xmlns:sg="clr-namespace:System.Globalization;assembly=mscorlib"
+ xmlns:sg1="clr-namespace:System.Globalization;assembly=System.Globalization.Extensions"
+ xmlns:si="clr-namespace:System.IO;assembly=mscorlib"
+ xmlns:si1="clr-namespace:System.IO;assembly=System.Core"
+ xmlns:si2="clr-namespace:System.IO;assembly=System"
+ xmlns:si3="clr-namespace:System.IO;assembly=System.ServiceModel"
+ xmlns:si4="clr-namespace:System.IO;assembly=System.Runtime.WindowsRuntime"
+ xmlns:sic="clr-namespace:System.IO.Compression;assembly=System"
+ xmlns:sii="clr-namespace:System.IO.IsolatedStorage;assembly=mscorlib"
+ xmlns:sim="clr-namespace:System.IO.MemoryMappedFiles;assembly=System.Core"
+ xmlns:sip="clr-namespace:System.IO.Pipes;assembly=System.Core"
+ xmlns:sip1="clr-namespace:System.IO.Ports;assembly=System"
+ xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+ xmlns:sl1="clr-namespace:System.Linq;assembly=System.Collections.Immutable"
+ xmlns:sle="clr-namespace:System.Linq.Expressions;assembly=System.Core"
+ xmlns:sm="clr-namespace:System.Media;assembly=System"
+ xmlns:smi="clr-namespace:System.Management.Instrumentation;assembly=System.Core"
+ xmlns:sn="clr-namespace:System.Net;assembly=System"
+ xmlns:snc="clr-namespace:System.Net.Cache;assembly=System"
+ xmlns:snc1="clr-namespace:System.Net.Configuration;assembly=System"
+ xmlns:snm="clr-namespace:System.Net.Mime;assembly=System"
+ xmlns:snm1="clr-namespace:System.Net.Mail;assembly=System"
+ xmlns:snn="clr-namespace:System.Net.NetworkInformation;assembly=System"
+ xmlns:sns="clr-namespace:System.Net.Security;assembly=System"
+ xmlns:sns1="clr-namespace:System.Net.Sockets;assembly=System"
+ xmlns:snw="clr-namespace:System.Net.WebSockets;assembly=System"
+ xmlns:snw1="clr-namespace:System.Net.WebSockets;assembly=System.Net.WebSockets.Client.Managed"
+ xmlns:snwm="clr-namespace:System.Net.WebSockets.Managed;assembly=System.Net.WebSockets.Client.Managed"
+ xmlns:sr="clr-namespace:System.Resources;assembly=mscorlib"
+ xmlns:sr1="clr-namespace:System.Reflection;assembly=mscorlib"
+ xmlns:sr2="clr-namespace:System.Runtime;assembly=mscorlib"
+ xmlns:sr3="clr-namespace:System.Reflection;assembly=System"
+ xmlns:src="clr-namespace:System.Runtime.ConstrainedExecution;assembly=mscorlib"
+ xmlns:src1="clr-namespace:System.Runtime.CompilerServices;assembly=mscorlib"
+ xmlns:src2="clr-namespace:System.Runtime.CompilerServices;assembly=System.Core"
+ xmlns:src3="clr-namespace:System.Runtime.CompilerServices;assembly=Microsoft.Bcl.AsyncInterfaces"
+ xmlns:src4="clr-namespace:System.Runtime.CompilerServices;assembly=System.ValueTuple"
+ xmlns:srd="clr-namespace:System.Runtime.DesignerServices;assembly=mscorlib"
+ xmlns:sre="clr-namespace:System.Reflection.Emit;assembly=mscorlib"
+ xmlns:sre1="clr-namespace:System.Runtime.ExceptionServices;assembly=mscorlib"
+ xmlns:srh="clr-namespace:System.Runtime.Hosting;assembly=mscorlib"
+ xmlns:sri="clr-namespace:System.Runtime.InteropServices;assembly=mscorlib"
+ xmlns:sri1="clr-namespace:System.Runtime.InteropServices;assembly=System.Core"
+ xmlns:sri2="clr-namespace:System.Runtime.InteropServices;assembly=System"
+ xmlns:sri3="clr-namespace:System.Runtime.InteropServices;assembly=System.Memory"
+ xmlns:sric="clr-namespace:System.Runtime.InteropServices.ComTypes;assembly=mscorlib"
+ xmlns:sric1="clr-namespace:System.Runtime.InteropServices.ComTypes;assembly=System"
+ xmlns:srie="clr-namespace:System.Runtime.InteropServices.Expando;assembly=mscorlib"
+ xmlns:sriw="clr-namespace:System.Runtime.InteropServices.WindowsRuntime;assembly=mscorlib"
+ xmlns:sriw1="clr-namespace:System.Runtime.InteropServices.WindowsRuntime;assembly=System.Runtime.WindowsRuntime"
+ xmlns:srr="clr-namespace:System.Runtime.Remoting;assembly=mscorlib"
+ xmlns:srra="clr-namespace:System.Runtime.Remoting.Activation;assembly=mscorlib"
+ xmlns:srrc="clr-namespace:System.Runtime.Remoting.Contexts;assembly=mscorlib"
+ xmlns:srrc1="clr-namespace:System.Runtime.Remoting.Channels;assembly=mscorlib"
+ xmlns:srrl="clr-namespace:System.Runtime.Remoting.Lifetime;assembly=mscorlib"
+ xmlns:srrm="clr-namespace:System.Runtime.Remoting.Metadata;assembly=mscorlib"
+ xmlns:srrm1="clr-namespace:System.Runtime.Remoting.Messaging;assembly=mscorlib"
+ xmlns:srrmw="clr-namespace:System.Runtime.Remoting.Metadata.W3cXsd2001;assembly=mscorlib"
+ xmlns:srrp="clr-namespace:System.Runtime.Remoting.Proxies;assembly=mscorlib"
+ xmlns:srrs="clr-namespace:System.Runtime.Remoting.Services;assembly=mscorlib"
+ xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=mscorlib"
+ xmlns:srs1="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization"
+ xmlns:srsc="clr-namespace:System.Runtime.Serialization.Configuration;assembly=System.Runtime.Serialization"
+ xmlns:srsf="clr-namespace:System.Runtime.Serialization.Formatters;assembly=mscorlib"
+ xmlns:srsfb="clr-namespace:System.Runtime.Serialization.Formatters.Binary;assembly=mscorlib"
+ xmlns:srsj="clr-namespace:System.Runtime.Serialization.Json;assembly=System.Runtime.Serialization"
+ xmlns:srv="clr-namespace:System.Runtime.Versioning;assembly=mscorlib"
+ xmlns:srv1="clr-namespace:System.Runtime.Versioning;assembly=System"
+ xmlns:ss="clr-namespace:System.Security;assembly=mscorlib"
+ xmlns:ss1="clr-namespace:System.Security;assembly=System.Core"
+ xmlns:ss2="clr-namespace:System.Security;assembly=System"
+ xmlns:ss3="clr-namespace:System.ServiceModel;assembly=System.ServiceModel"
+ xmlns:ssa="clr-namespace:System.Security.AccessControl;assembly=mscorlib"
+ xmlns:ssa1="clr-namespace:System.Security.Authentication;assembly=System"
+ xmlns:ssa2="clr-namespace:System.Security.AccessControl;assembly=System"
+ xmlns:ssa3="clr-namespace:System.ServiceModel.Activation;assembly=System.ServiceModel"
+ xmlns:ssac="clr-namespace:System.ServiceModel.Activation.Configuration;assembly=System.ServiceModel"
+ xmlns:ssae="clr-namespace:System.Security.Authentication.ExtendedProtection;assembly=System"
+ xmlns:ssaec="clr-namespace:System.Security.Authentication.ExtendedProtection.Configuration;assembly=System"
+ xmlns:ssc="clr-namespace:System.Security.Cryptography;assembly=mscorlib"
+ xmlns:ssc1="clr-namespace:System.Security.Claims;assembly=mscorlib"
+ xmlns:ssc2="clr-namespace:System.Security.Cryptography;assembly=System.Core"
+ xmlns:ssc3="clr-namespace:System.Security.Claims;assembly=System"
+ xmlns:ssc4="clr-namespace:System.Security.Cryptography;assembly=System"
+ xmlns:ssc5="clr-namespace:System.ServiceModel.ComIntegration;assembly=System.ServiceModel"
+ xmlns:ssc6="clr-namespace:System.ServiceModel.Configuration;assembly=System.ServiceModel"
+ xmlns:ssc7="clr-namespace:System.ServiceModel.Channels;assembly=System.ServiceModel"
+ xmlns:sscx="clr-namespace:System.Security.Cryptography.X509Certificates;assembly=mscorlib"
+ xmlns:sscx1="clr-namespace:System.Security.Cryptography.X509Certificates;assembly=System.Core"
+ xmlns:sscx2="clr-namespace:System.Security.Cryptography.X509Certificates;assembly=System"
+ xmlns:ssd="clr-namespace:System.ServiceModel.Description;assembly=System.ServiceModel"
+ xmlns:ssd1="clr-namespace:System.ServiceModel.Dispatcher;assembly=System.ServiceModel"
+ xmlns:ssd2="clr-namespace:System.ServiceModel.Diagnostics;assembly=System.ServiceModel"
+ xmlns:ssm="clr-namespace:System.ServiceModel.MsmqIntegration;assembly=System.ServiceModel"
+ xmlns:ssp="clr-namespace:System.Security.Permissions;assembly=mscorlib"
+ xmlns:ssp1="clr-namespace:System.Security.Principal;assembly=mscorlib"
+ xmlns:ssp2="clr-namespace:System.Security.Policy;assembly=mscorlib"
+ xmlns:ssp3="clr-namespace:System.Security.Permissions;assembly=System"
+ xmlns:ssp4="clr-namespace:System.ServiceModel.PeerResolvers;assembly=System.ServiceModel"
+ xmlns:sss="clr-namespace:System.ServiceModel.Syndication;assembly=System.ServiceModel"
+ xmlns:sss1="clr-namespace:System.ServiceModel.Security;assembly=System.ServiceModel"
+ xmlns:ssst="clr-namespace:System.ServiceModel.Security.Tokens;assembly=System.ServiceModel"
+ xmlns:ssx="clr-namespace:System.ServiceModel.XamlIntegration;assembly=System.ServiceModel"
+ xmlns:st="clr-namespace:System.Threading;assembly=mscorlib"
+ xmlns:st1="clr-namespace:System.Text;assembly=mscorlib"
+ xmlns:st2="clr-namespace:System.Threading;assembly=System.Core"
+ xmlns:st3="clr-namespace:System.Timers;assembly=System"
+ xmlns:st4="clr-namespace:System.Threading;assembly=System"
+ xmlns:st5="clr-namespace:System.Threading;assembly=System.Runtime.WindowsRuntime"
+ xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System"
+ xmlns:stt="clr-namespace:System.Threading.Tasks;assembly=mscorlib"
+ xmlns:stt1="clr-namespace:System.Threading.Tasks;assembly=System.Core"
+ xmlns:stt2="clr-namespace:System.Threading.Tasks;assembly=Microsoft.Bcl.AsyncInterfaces"
+ xmlns:stts="clr-namespace:System.Threading.Tasks.Sources;assembly=Microsoft.Bcl.AsyncInterfaces"
+ xmlns:sw="clr-namespace:System.Web;assembly=System"
+ xmlns:swi="clr-namespace:System.Windows.Input;assembly=System"
+ xmlns:swm="clr-namespace:System.Windows.Markup;assembly=System"
+ xmlns:sx="clr-namespace:System.Xml;assembly=System.Xml"
+ xmlns:sx1="clr-namespace:System.Xml;assembly=System.Runtime.Serialization"
+ xmlns:sx2="clr-namespace:System.Xml;assembly=System.Data"
+ xmlns:sxr="clr-namespace:System.Xml.Resolvers;assembly=System.Xml"
+ xmlns:sxs="clr-namespace:System.Xml.Serialization;assembly=System.Xml"
+ xmlns:sxs1="clr-namespace:System.Xml.Schema;assembly=System.Xml"
+ xmlns:sxsa="clr-namespace:System.Xml.Serialization.Advanced;assembly=System.Xml"
+ xmlns:sxsc="clr-namespace:System.Xml.Serialization.Configuration;assembly=System.Xml"
+ xmlns:sxx="clr-namespace:System.Xml.Xsl;assembly=System.Xml"
+ xmlns:sxx1="clr-namespace:System.Xml.XPath;assembly=System.Xml"
+ xmlns:sxx2="clr-namespace:System.Xml.XmlConfiguration;assembly=System.Xml"
+ xmlns:wf="clr-namespace:Windows.Foundation;assembly=System.Runtime.WindowsRuntime"
+ xmlns:wu="clr-namespace:Windows.UI;assembly=System.Runtime.WindowsRuntime"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>OpenRPA</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>OpenRPA.NM</x:String>
+      <x:String>OpenRPA.Interfaces</x:String>
+      <x:String>OpenRPA.Image</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>OpenRPA</AssemblyReference>
+      <AssemblyReference>OpenRPA.Interfaces</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.HashCode</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Net.WebSockets.Client.Managed</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Globalization.Extensions</AssemblyReference>
+      <AssemblyReference>OpenRPA.NM</AssemblyReference>
+      <AssemblyReference>OpenRPA.Image</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Tottal" />
+      <Variable x:TypeArguments="x:String" Name="name" />
+      <Variable x:TypeArguments="x:String" Name="result" />
+      <Variable x:TypeArguments="x:String" Name="Diffrence" />
+    </Sequence.Variables>
+    <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="sd4:DataSet" Name="dtExcel" />
+        <Variable x:TypeArguments="oi3:ImageElement" Name="outimage" />
+      </Flowchart.Variables>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID6</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+        <TryCatch sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch.Try>
+            <Sequence DisplayName="Read Excel" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <ou:DownloadFile Password="{x:Null}" Username="{x:Null}" sap2010:WorkflowViewState.IdRef="DownloadFile_1" IgnoreSecurity="False" LocalPath="[&quot;E:\Quadance Tech files\OpenRPA\MariasTask\Task.xlsx&quot;]" Overwrite="True" URL="https://robotsparebinindustries.com/SalesData.xlsx" />
+              <ou:ReadExcel DataSet="[dtExcel]" Filename="E:\Quadance Tech files\OpenRPA\MariasTask\Task.xlsx" sap2010:WorkflowViewState.IdRef="ReadExcel_1" UseHeaderRow="True" />
+            </Sequence>
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <ActivityAction x:TypeArguments="s:Exception">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                </ActivityAction.Argument>
+                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Error in reading Excel file" />
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
+        <FlowStep.Next>
+          <FlowDecision x:Name="__ReferenceID0" Condition="[dtExcel.Tables(0).rows.count &gt; 0]" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <FlowDecision.True>
+              <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+                <Sequence DisplayName="Login Sequence" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <on:OpenURL UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Browser="Chrome" sap2010:WorkflowViewState.IdRef="OpenURL_1" NewTab="True" Url="https://robotsparebinindustries.com/#/" />
+                  <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="username text username" sap2010:WorkflowViewState.IdRef="GetElement_1" Image="/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkASwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAoWer2t6JTFvBjkMbLIu05AB4B6jBBz71O17Aoclx8g+YBhlfrzXDf2VdNq9xqi6PH9pfUoZY5jcqGECoqtj0Bwfl755qjpWjXGj3LpcKTIkMqPcq8eJ9xyGIVAxPf5zwemc0gO0g8T2c95JaLBdiWNPM+eHaGXOMqScEZ9Kv2+p21zG0iNgISr5YfKR688VwTr4hOutcR6VGkAtWtBL9sUEZcNvC+3XHWsaw8MXsWk3NjcwRhnWOCbMqBZ9rqxICqMsQMguerEEHk0DPVp9Tt4LVrkkvGF3DyyG3fTnmq1l4i0u/sre7guk8u4UNGHYKx9sE5z7V5/feGNTktoPN02C9t7a7nmWwadcSCQDa2AoUFSDwBjDEjnrztr4Y1JoLW3NqjSR2q23kxyIfKZWJLIzISAcg5GGG0UCPcBdxMAQw5OB8w/wAarXGs2drd2lrKziW7ZkiAUkEgZOSOF49cVxGjeEYo9avL3UdKiVxPFPaXCz5YMq4J2j7pJyT/AHu/SrXiO3vX1PT7nT9IE08MqO155qIwXDAx5OT3HbFFxnaNewrtBbJY4ABBJ9e/akN/CPXpnt0rzqTRZ49Wn1M6FFHci/huROtymdiovmkf3SSDkD72ean8Q21tq+taTPJawXljbuXm81wmFKsuMYywyQdvQ4o1Ed+t9A5ChgGPRSwyfwzWavizSn1tdJDy/aGd41byz5bOihmQP03AEcVxUfhZrbVlksIS9krW5t3EqKbZEA+XLKX9T8p53EHHWnDQrw6Zq8f9hWtrJNfi+tsTRks25SBlR8rDaeefvUXGeji7hJwGBOcYDD/Gq6axavqL2ILiZY1lBI+VlJI+Vuh5GMV5ZqNreTrqtnc+HbVPtGoxXaKl4o2j5C/zAAhiFIOOu41Z1HSrGxuSdM0ezu7c20sSQvPtW3lkfeXXg4Gf7uCMcUageljVrVtRaxBczrEJj8h27Scfe6ZyOmc0271i0s4DNIzOgkWNvKAcoWIAyB0GSMntXC2K351SK+t9Kj2xxtb3U/2hUa6dvLxJgcnGG64qmnhe/t9IvIo9Jt4mntEt3QXSbnbzAxPmBVO0Dd94luRigR6e13CqF2dQo6sWGB+Oaoan4hs9J05r66Wb7OnLMihiB64BziuH1HQrqSaRbOwihsIr1ZorZJIikoMQQ4VlKghvmwRzknINZmp+DL+4tHtBYW9/MbERQrcXPFm25jwcDg5H3QOVA6UXA9aa8hRC7uqoBkszAAfrQbuIDJYAAZOWH+NcbrVpPrNlpq/ZY3EM6Tzx70YqVU4xnKnDHnIIrHXw5NcQacl9olrefZLG4gaT7SrDJOYgQQNw+owpPGKLjR32p67Z6TbpPdCXy2dUzGu7bkgAnHQZIGferU17HBDJIQzBASVXBJ9gM8n2ry3U/DWpXNuGk0m2vLx4rQRzT3Q3Wvk7d6g453FSQR1Lc9K6PXdOk1B9PnFhDqENvI7SWM0gVXLLgNlhtJU+vqSOQKGB1FhrVlqVhDe2znyZV3LvwpAzjkHkcilg1e2uLu5tU3ia2ZQ4dcZyMgr6jHcV5zH4Y1ODw/b2iaNYvctp0+nTp9oAQBmDIxYrlkHOBjIzQmianmS5uNMtRdTW9qi3T3IJsmiGGxxknuMHnoaBHoket2UmozWCu32iHbuDLgHcMjBPDfhnFWvtcP8AeXrj7w6+nXrXmUsGoyalqhsLe1sLe9tzAJvOQMj5f97heecjvn8qdB4fmubS7NtpFjZqsMQit4pwyzTxyBvMyBhTgFQx+Y55oA9Ka9gVSzSKFBwSXUAfrVQ67aebJGokYxgltoBGB17159e6bqAS6muvD1ssM2pi8EMd4hHzQ7DkFSpbI5BBB3ZB4zVqLSribw0ul+TD5tsUUwo2I5ArAmMnsCBtPGPbHFAzuU1uze4jgDHfIoZc46Yz61ZN7AoUmRQGOFy68n0HPNeT2FuLbU5ZrLSLZri01R5DaJMoCRtBtKh8YGc5KjjjFSW/hvU9Q0OzV9NtYWt7W4ggVJ1Kxs8m4EFlOFxgDA3DHai4j0Y+IbNb+WyaO4WeNdwDRECRc4ypPDDPpUCeLtJazvbtpJIoLIsJnlQr93GdufvDkciuFurzWL7xDFcPpiJDDbm3LC6U7iWUlvccH3rKn0u8n0zWbNNLsore/jxbxOyOsThAAdgGBlh1BOOtPoM9di1e0mmaKN8suckEYH45qSXUbaGMySSKEAzu3DH868su4Hmh0/TbnTLWw165ZvssSQeYi2zjy5AzqNu8KzNjtge9b2u6Qj6Nb6Zp9lH9lgliVIBIIwFU57gjPGcEEHvSEdpBqdtcLujfI47jv071KbuEOIy6hyMhdwyR9M15euhxWU2mWd1pdpPOUuyLVJUQhGZWXPAViDu6AYySBxVi28P6qNQh1HyYZrmOW2JmMwXckS7SCSpbdy3TAPGeaAPSPtUXGGBz0ww5/Wq0OrwXCb4Y5JEzjcu0j+defSeF7b/idPJp0en388s0lhcxTbjGrxbOi8KPvEjn72etULXwprj26GG3+yKFAKR36QgkAc7Y48enJ545oQM9FhbdHjBG04571kS28n9oTtIh2SOqox+ozWvDb3QmYtGxD47dMCi7sJpY1Zd6sh3/ACjJPFAyJ7KF2ZiZMsSThzWdqMLlplhVjJlGXaeQMEH+VWFS+2M229G3HBgGT9Ks2NncM7zuJ8kbNsqBT60AVNTa6+zqsT7UEe6Ru59qwYceZksytj5SDjntXZz2zmCQPCzrtOVUcn2rBg0iSO9Z5LadoFIKDYcnPTP070IRqWRuDCy3JBkViNw7j1qyQCMEZBqX7PL/AHDR9nl/uGkMqmNRIg5IOcgnI6UzyJPthl+Qw+Xs2Y59aszWsrR/6tiR0x1qI2k3m/6p8ZGOPrQBBE4ebyfL8uRMM4HTHapH+WQ+Z/q24zmpobORDIREQzNySOTUv2eUjBjNAHI3TpFqkrbRKgbo3fika4tQjeVaYYjGXfIH0rdutFeSVpPI3KTnAPSmNoO0f8ewPOOCaYiponlrbyszfMG4H4VqeU725VsBjyMknBqS00x7ZGHlDJPbtVn7PL/cNAzNFmsUXmzEyzLg7z0XnsO1RrDZpes+8DCBgu5sjnOfpWo8EoQ/u2PGOKoGzuWlmH2eT54gAcf7OOv1oALW3hksoi0YORnI4PX1pywLCpRSTvfe5PfNW4beYQoDGwIUAg1J9nl/uGkBTIIf5c4HYUsSkP8AMckVMbabzw3ltjGDilitpxu3Rt170AJUFwNiNIsfmf7H96rn2eX+4aZJby+Ww8snIxQBiPbHzfKFvshlBkZAORjsPrxVsssUJkEXkxx/wqOfrU/2OfqI5Mg4HJ6d6mSzd7fy3hJU5BDCmBn3csVzpkjujfu2G5D8pDA//XrNiuGj1Z496pG8x3FlHA+prev7OaSxkRIjubGMD39qpS6PND5s5jWUM4fb5RZvoOaAMxbl59RAkKsibwuABkYPpWl88ekwpbRsQ6bj83Kjr19abDoE6n7QCeVYhCmCMg8frWnaWsyWcKmNgVQA5GKAMy7iuTNG1vBuXy1yC2MHn/GoLW2vo5bdJYAI0cHORkc1qX8U4aDFvK+H3NtTdgUojuP7TKiCXy9uN2zjP1oAnzVG5aJZdrE5JGMDpWn9nl/uGqtxazmVTHE4YjkhevpSAZK4fEasCx549qW1b5ZFwQFc4PrSJZXJVzIsmRyFx1ot7a7STLxPhuMY/WmBm30Eh1CaVkJiMexSegJxWzFYwupYmTOecOR2pLqwlni2gMhBDZAz0qnCb1UIK3w5/wCeC0AdLRRRTEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//Z" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//input[@id=\&quot;username\&quot;]&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                    <on:GetElement.Variables>
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                    </on:GetElement.Variables>
+                    <ActivityAction x:TypeArguments="on:NMElement">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                      </ActivityAction.Argument>
+                      <Assign x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Assign`1_1" To="[item.value]" Value="maria" />
+                    </ActivityAction>
+                  </on:GetElement>
+                  <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="password password password" sap2010:WorkflowViewState.IdRef="GetElement_2" Image="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/wAJ1rHH+nW/Bz/q0qaP4ga4q4GoW/X/AJ5pR/YuI/mj97/yDlZ5BqQH9qXfH/LZ/wCZqrgegrpdQ8IeJn1G6dPDurMrSsQRZSYIyf8AZqt/whvij/oW9X/8AZP/AImvJAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BTlAx0FbX/CG+KP8AoW9X/wDAGT/4mnDwd4ox/wAi5q//AIAyf/E0AfXFFFFIkKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//input[@id=\&quot;password\&quot;]&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                    <on:GetElement.Variables>
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                    </on:GetElement.Variables>
+                    <ActivityAction x:TypeArguments="on:NMElement">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                      </ActivityAction.Argument>
+                      <Assign x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Assign`1_2" To="[item.value]" Value="thoushallnotpass" />
+                    </ActivityAction>
+                  </on:GetElement>
+                  <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName=" submit " sap2010:WorkflowViewState.IdRef="GetElement_3" Image="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" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//div[@id=\&quot;root\&quot;]/div/div/div/div[1]/form/button&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                    <on:GetElement.Variables>
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                    </on:GetElement.Variables>
+                    <ActivityAction x:TypeArguments="on:NMElement">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                      </ActivityAction.Argument>
+                      <oa:ClickElement KeyModifiers="{x:Null}" AnimateMouse="False" Button="1" DoubleClick="False" Element="[item]" sap2010:WorkflowViewState.IdRef="ClickElement_1" OffsetX="50" OffsetY="229" PostWait="00:00:00" VirtualClick="True" />
+                    </ActivityAction>
+                  </on:GetElement>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                    <Sequence DisplayName="Enter Data to website" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <oa:ForEachDataRow DataView="{x:Null}" DataTable="[dtExcel.Tables(0)]" sap2010:WorkflowViewState.IdRef="ForEachDataRow_1">
+                        <oa:ForEachDataRow.Variables>
+                          <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                          <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                        </oa:ForEachDataRow.Variables>
+                        <ActivityAction x:TypeArguments="sd4:DataRowView">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd4:DataRowView" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="firstname text firstname" sap2010:WorkflowViewState.IdRef="GetElement_4" Image="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oQM9FhbdHjBG04571kS28n9oTtIh2SOqox+ozWvDb3QmYtGxD47dMCi7sJpY1Zd6sh3/ACjJPFAyJ7KF2ZiZMsSThzWdqMLlplhVjJlGXaeQMEH+VWFS+2M229G3HBgGT9Ks2NncM7zuJ8kbNsqBT60AVNTa6+zqsT7UEe6Ru59qwYceZksytj5SDjntXZz2zmCQPCzrtOVUcn2rBg0iSO9Z5LadoFIKDYcnPTP070IRqWRuDCy3JBkViNw7j1qyQCMEZBqX7PL/AHDR9nl/uGkMqmNRIg5IOcgnI6UzyJPthl+Qw+Xs2Y59aszWsrR/6tiR0x1qI2k3m/6p8ZGOPrQBBE4ebyfL8uRMM4HTHapH+WQ+Z/q24zmpobORDIREQzNySOTUv2eUjBjNAHI3TpFqkrbRKgbo3fika4tQjeVaYYjGXfIH0rdutFeSVpPI3KTnAPSmNoO0f8ewPOOCaYiponlrbyszfMG4H4VqeU725VsBjyMknBqS00x7ZGHlDJPbtVn7PL/cNAzNFmsUXmzEyzLg7z0XnsO1RrDZpes+8DCBgu5sjnOfpWo8EoQ/u2PGOKoGzuWlmH2eT54gAcf7OOv1oALW3hksoi0YORnI4PX1pywLCpRSTvfe5PfNW4beYQoDGwIUAg1J9nl/uGkBTIIf5c4HYUsSkP8AMckVMbabzw3ltjGDilitpxu3Rt170AJUFwNiNIsfmf7H96rn2eX+4aZJby+Ww8snIxQBiPbHzfKFvshlBkZAORjsPrxVsssUJkEXkxx/wqOfrU/2OfqI5Mg4HJ6d6mSzd7fy3hJU5BDCmBn3csVzpkjujfu2G5D8pDA//XrNiuGj1Z496pG8x3FlHA+prev7OaSxkRIjubGMD39qpS6PND5s5jWUM4fb5RZvoOaAMxbl59RAkKsibwuABkYPpWl88ekwpbRsQ6bj83Kjr19abDoE6n7QCeVYhCmCMg8frWnaWsyWcKmNgVQA5GKAMy7iuTNG1vBuXy1yC2MHn/GoLW2vo5bdJYAI0cHORkc1qX8U4aDFvK+H3NtTdgUojuP7TKiCXy9uN2zjP1oAnzVG5aJZdrE5JGMDpWn9nl/uGqtxazmVTHE4YjkhevpSAZK4fEasCx549qW1b5ZFwQFc4PrSJZXJVzIsmRyFx1ot7a7STLxPhuMY/WmBm30Eh1CaVkJiMexSegJxWzFYwupYmTOecOR2pLqwlni2gMhBDZAz0qnCb1UIK3w5/wCeC0AdLRRRTEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//Z" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//input[@id=\&quot;firstname\&quot;]&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                              <on:GetElement.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                              </on:GetElement.Variables>
+                              <ActivityAction x:TypeArguments="on:NMElement">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                </ActivityAction.Argument>
+                                <Assign x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Assign`1_3" To="[item.value]" Value="[row(&quot;First Name&quot;).ToString]" />
+                              </ActivityAction>
+                            </on:GetElement>
+                            <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="lastname text lastname" sap2010:WorkflowViewState.IdRef="GetElement_5" Image="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/wAJ1rHH+nW/Bz/q0qaP4ga4q4GoW/X/AJ5pR/YuI/mj97/yDlZ5BqQH9qXfH/LZ/wCZqrgegrpdQ8IeJn1G6dPDurMrSsQRZSYIyf8AZqt/whvij/oW9X/8AZP/AImvJAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BRgegrc/4Q3xR/wBC3q//AIAyf/E0f8Ib4o/6FvV//AGT/wCJoAw8D0FGB6Ctz/hDfFH/AELer/8AgDJ/8TR/whvij/oW9X/8AZP/AImgDDwPQUYHoK3P+EN8Uf8AQt6v/wCAMn/xNH/CG+KP+hb1f/wBk/8AiaAMPA9BTlAx0FbX/CG+KP8AoW9X/wDAGT/4mnDwd4ox/wAi5q//AIAyf/E0AfXFFFFIkKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//input[@id=\&quot;lastname\&quot;]&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                              <on:GetElement.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                              </on:GetElement.Variables>
+                              <ActivityAction x:TypeArguments="on:NMElement">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                </ActivityAction.Argument>
+                                <Assign x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Assign`1_4" To="[item.value]" Value="[row(&quot;Last Name&quot;).ToString]" />
+                              </ActivityAction>
+                            </on:GetElement>
+                            <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="salestarget  " sap2010:WorkflowViewState.IdRef="GetElement_6" Image="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g+Of+gZ4k/78z/4UWCx9N7H/ALrflRsf+635V8yf2D45/wCgZ4k/78z/AOFH9g+Of+gZ4k/78z/4UWCx9N7H/ut+VGx/7rflXzJ/YPjn/oGeJP8AvzP/AIUf2D45/wCgZ4k/78z/AOFFgsfTex/7rflRsf8Aut+VfMn9g+Of+gZ4k/78z/4Uf2D45/6BniT/AL8z/wCFFgsfTex/7rflRsf+635V8yf2D45/6BniT/vzP/hR/YPjn/oGeJP+/M/+FFgsfTex/wC635UbH/ut+VfMn9g+Of8AoGeJP+/M/wDhR/YPjn/oGeJP+/M/+FFgsfTYRs/dP5V8s+KnWTxhrTowZWvZSGByD8xq3/YHjgjB0zxH/wB+Z/8ACq48HeKP+hc1f/wBk/8AiaaVhn1xRRRSJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//select[@id=\&quot;salestarget\&quot;]&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                              <on:GetElement.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                              </on:GetElement.Variables>
+                              <ActivityAction x:TypeArguments="on:NMElement">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                </ActivityAction.Argument>
+                                <Assign x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Assign`1_5" To="[item.value]" Value="[row(&quot;Sales Target&quot;).ToString]" />
+                              </ActivityAction>
+                            </on:GetElement>
+                            <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="salesresult number salesresult" sap2010:WorkflowViewState.IdRef="GetElement_7" Image="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g+Of+gZ4k/78z/4UWCx9N7H/ALrflRsf+635V8yf2D45/wCgZ4k/78z/AOFH9g+Of+gZ4k/78z/4UWCx9N7H/ut+VGx/7rflXzJ/YPjn/oGeJP8AvzP/AIUf2D45/wCgZ4k/78z/AOFFgsfTex/7rflRsf8Aut+VfMn9g+Of+gZ4k/78z/4Uf2D45/6BniT/AL8z/wCFFgsfTex/7rflRsf+635V8yf2D45/6BniT/vzP/hR/YPjn/oGeJP+/M/+FFgsfTex/wC635UbH/ut+VfMn9g+Of8AoGeJP+/M/wDhR/YPjn/oGeJP+/M/+FFgsfTYRs/dP5V8s+KnWTxhrTowZWvZSGByD8xq3/YHjgjB0zxH/wB+Z/8ACq48HeKP+hc1f/wBk/8AiaaVhn1xRRRSJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//input[@id=\&quot;salesresult\&quot;]&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                              <on:GetElement.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                              </on:GetElement.Variables>
+                              <ActivityAction x:TypeArguments="on:NMElement">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                </ActivityAction.Argument>
+                                <Assign x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Assign`1_6" To="[item.value]" Value="[row(&quot;Sales&quot;).ToString]" />
+                              </ActivityAction>
+                            </on:GetElement>
+                            <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName=" submit " sap2010:WorkflowViewState.IdRef="GetElement_8" Image="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" MaxResults="1" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//form[@id=\&quot;sales-form\&quot;]/button&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                              <on:GetElement.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                              </on:GetElement.Variables>
+                              <ActivityAction x:TypeArguments="on:NMElement">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                </ActivityAction.Argument>
+                                <oa:ClickElement KeyModifiers="{x:Null}" AnimateMouse="False" Button="1" DoubleClick="False" Element="[item]" sap2010:WorkflowViewState.IdRef="ClickElement_2" OffsetX="68" OffsetY="223" PostWait="00:00:00" VirtualClick="True" />
+                              </ActivityAction>
+                            </on:GetElement>
+                          </Sequence>
+                        </ActivityAction>
+                      </oa:ForEachDataRow>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+                        <Sequence DisplayName="Extract Table" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="sd4:DataTable" Name="dt_Table" />
+                          </Sequence.Variables>
+                          <ou:CreateDataTable ColumnNames="[{&quot;Name&quot;,&quot;Target&quot;,&quot;Result&quot;,&quot;Diffrence&quot;}]" DataTable="[dt_Table]" sap2010:WorkflowViewState.IdRef="CreateDataTable_1" />
+                          <on:GetElement Elements="{x:Null}" From="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" DisplayName="  " sap2010:WorkflowViewState.IdRef="GetElement_11" Image="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" MaxResults="1000" MinResults="1" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;Selector&quot;: &quot;NM&quot;,&#xD;&#xA;    &quot;browser&quot;: &quot;chrome&quot;,&#xD;&#xA;    &quot;frame&quot;: &quot;-1&quot;,&#xD;&#xA;    &quot;url&quot;: &quot;https://robotsparebinindustries.com/?firstname=Vincenty&amp;lastname=Stannering&amp;salesresult=109884#/&quot;&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;xpath&quot;: &quot;//div[@id=\&quot;sales-results\&quot;]/table/tbody/tr&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(3)]">
+                            <on:GetElement.Variables>
+                              <Variable x:TypeArguments="x:Int32" Default="0" Name="Total12" />
+                              <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                            </on:GetElement.Variables>
+                            <ActivityAction x:TypeArguments="on:NMElement">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                              </ActivityAction.Argument>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <on:GetElement Elements="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" From="[item]" sap2010:WorkflowViewState.IdRef="GetElement_9" Image="/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkASwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACobn/Vj6/wBDU1MljEq7SWHOeDQBn5+n5UZ+n5VZ+wp/z0l/76o+wp/z0l/76p3FYrZ+n5UZ+n5VZ+wp/wA9Jf8Avqj7Cn/PSX/vqi4WK2fp+VGfp+VWfsKf89Jf++qPsKf89Jf++qLhYrZ+n5UZ+n5VZ+wp/wA9Jf8Avqj7Cn/PSX/vqi4WK2fp+VGfp+VWfsKf89Jf++qPsKf89Jf++qLhYrZ+n5UZ+n5VZ+wp/wA9Jf8Avqj7Cn/PSX/vqi4WMr+z4Tqv9pOWedY/LjDH5Yh32jsT3NK2nwHVE1FdyXCxmNipwJF7Bh3x2rU+wp/z0l/76o+wp/z0l/76p3CxFan/AEof7h7e4qxL/wAfMH/Av5VHHCIbxQGY5jP3j7ipJf8Aj5g/4F/KkBPUMP8Arp/98fyFTVBD/rp/98fyFIZPRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAQn/j9T/rmf5ikl/wCPmD/gX8qU/wDH6n/XM/zFJL/x8wf8C/lTET1BD/rp/wDfH8hU9QQ/66f/AHx/IUhk9FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBCf+P1P+uZ/mKSX/j5g/4F/KlP/H6n/XM/zFJL/wAfMH/Av5UxE9QQ/wCun/3x/IVPUEP+un/3x/IUhk9FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBCf+P1P+uZ/mKSX/AI+YP+BfypT/AMfqf9cz/MUkv/HzB/wL+VMRPUEP+un/AN8fyFT1BD/rp/8AfH8hSGT0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUVWvRmADLD5uzEdj6VFSfJFy7DiruxZorF2f7cn/AH8b/GjZ/tyf9/G/xri+vr+U29h5m1RWLs/25P8Av43+NGz/AG5P+/jf40fX1/KHsPM2qKxdn+3J/wB/G/xo2f7cn/fxv8aPr6/lD2HmbVFYuz/bk/7+N/jRs/25P+/jf40fX1/KHsPM2qKxdn+3J/38b/GjZ/tyf9/G/wAaPr6/lD2HmbVFYuz/AG5P+/jf40bP9uX/AL+N/jR9fX8oew8zaorEO6LDpJIGDDq5Pf3rbrpoV1VvpaxnOHKQn/j9T/rmf5ikl/4+YP8AgX8qU/8AH6n/AFzP8xSS/wDHzB/wL+VdBmT1BD/rp/8AfH8hU9QQ/wCun/3x/IUhk9FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFV7z/Uj6/0NWKr3n+pH1/oaxxH8KRcPiRn0VG0yKxU5yKT7Qnv+VeLY2eIpJ2ciWiovtCe/5UfaE9/yosL6zR/mRLRUX2hPf8qPtCe/5UWD6zR/mRLRUX2hPf8AKj7Qnv8AlRYPrNH+ZEtFRfaE9/yo+0J7/lRYPrNH+ZFfVL86faCSO3kuJ5GEcMKD77npk9h3JPauXsNXuLS9nm/tF9U2t/xMLdF4h7b4P7yKflIGemetdHqcb39p9miuntkdgJmQfOyd1U9ifX0zVe70u0ktrVbL/Qp7P/j1ljX/AFY7qR3U9xWsHFKz6kSxFNvSSNaQhoQQcglSPzFblc886mMA/eyM4HHUVq/2lB6P+VdOClGPNfyM62IpO1pEx/4/U/65n+YpJf8Aj5g/4F/Kqpv4ftSvh8BCOnuKHv4TPEwD4XOePau/2sO5j7an3NGoIf8AXT/74/kKi/tKD0f8qiiv4VkmJD/M2Rx7Cj2sO4e2p9zRoqn/AGlB6P8AlR/aUHo/5Uvaw7h7an3LlFU/7Sg9H/KrSOJEVx0YZGaqM4y2ZUakZfCx1FFFUWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFUNWmaC0VlAJ345+hoorDE/wAKRdP4kYnnNJ87KuT6Ub/YUUV462PKrfxJerDf7Cjf7CiigzDf7Cjf7CiigA3+wo3+woooAN/sKN/sKKKADf7Cjf7CiigA3ZIGB1q1x6UUVrT6kSG8bxx2pSBuXiiitSRePSmjGW470UUDHcelHHpRRQAcelbdt/x7Rf7ooorpw3xM68J8TJaKKK7DvCiiigAooooAKKKKAP/Z" MaxResults="1000" MinResults="[0]" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;cssselector&quot;: &quot; td:nth-child(1)&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(0)]">
+                                  <on:GetElement.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Index1" />
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Total12" />
+                                  </on:GetElement.Variables>
+                                  <ActivityAction x:TypeArguments="on:NMElement">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                    </ActivityAction.Argument>
+                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[item.Text]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </on:GetElement>
+                                <on:GetElement Elements="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" From="[item]" sap2010:WorkflowViewState.IdRef="GetElement_10" Image="/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkASwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACioJ7uO3fa4bJGeBUysGQMOhGRSUk3ZEqSbshaKKKZQUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAGXqX+uX/dH9a0Yf9RH/ALo/lRRXPT/iSOal/FkPoooroOkKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP//Z" MaxResults="1000" MinResults="[0]" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;cssselector&quot;: &quot; td:nth-child(2)&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(0)]">
+                                  <on:GetElement.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                                  </on:GetElement.Variables>
+                                  <ActivityAction x:TypeArguments="on:NMElement">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                    </ActivityAction.Argument>
+                                    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[Tottal]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[item.Text]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </ActivityAction>
+                                </on:GetElement>
+                                <on:GetElement Elements="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" From="[item]" sap2010:WorkflowViewState.IdRef="GetElement_12" Image="/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkASwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigDxL4i2LzeNLuRblowVj+UD/AGB71yv9mSf8/sn5f/Xrt/Hv/I23X+6n/oArjprm8SVli01pUHRxOi5/A81aw1Jq7X5ng1uKc4o1pUKNa0Yuy0hsvNoh/syT/n9k/L/69H9mSf8AP7J+X/16sW9xdSybZrBoExneZkb8MCrNP6pR7fmYS4wzyLs6/wD5LB/kjO/syT/n9k/L/wCvR/Zkn/P7J+X/ANetGin9Uo9vzF/rlnf/AD//APJYf/Imd/Zkn/P7J+X/ANej+zJP+f2T8v8A69aNFH1Sj2/MP9cs7/5//wDksP8A5EzW05kGWv2X/e4/rQunM4yt+zD/AGef61Tms5dau7xJrhVhtp/LjjMCuPug55781V0iP7J4hNsm0AebG5RNgcKFKkqOMjJ5qfqtG/w/izsXFGcuDf1n3kr25I+v8pr/ANmSf8/sn5f/AF6P7Mk/5/ZPy/8Ar1o0VX1Sj2/M4/8AXLO/+f8A/wCSw/8AkTO/syT/AJ/ZPy/+vR/Zkn/P7J+X/wBetGij6pR7fmH+uWd/8/8A/wAlh/8AImd/Zkn/AD+yfl/9ej+zJM4+2vke3/160azNVQWo/tOKQRTxgKQ3SYf3CPX0pPCUV9n8y6fF+dzly+33/uw/+RHf2ZJ3vX59v/r0f2ZJ/wA/sn5f/XqHTCdTmOoXPyyRMVjtj/ywP+1/tGtehYSi/s/mOrxdndOXK6+vX3Yf/Imd/Zkn/P7J+X/16l02GS18T6QhneQPcxk5/wB8CrlRQf8AI16J/wBfMf8A6MFY4jD04U+aK1Pb4Z4kzPH5hHD4mrzQalpyxW0W+iTPouiiiqNwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPH/Hv/ACNt1/up/wCgCuZr0nxP4Tl1XXZrtbnYHCjb5eeigdc1j/8ACBTf8/h/78//AGVdUGuVHxmMyzFVMROcYaNvqv8AM46iux/4QKb/AJ/D/wB+f/sqP+ECm/5/D/35/wDsqrmRzf2TjP5PxX+Zx1Fdj/wgU3/P4f8Avz/9lR/wgU3/AD+H/vz/APZUcyD+ycZ/J+K/zOOorsf+ECm/5/D/AN+f/sqP+ECm/wCfw/8Afn/7KjmQf2TjP5PxX+Z542mTrc3E1tqMtuJ38x0ESsN2AOp+lTWOnrZ+Y7SmeeRy7ysoByfQDoK73/hApv8An8P/AH5/+yo/4QKb/n8P/fn/AOypXiavL8e48rh/6T+Zx1Fdj/wgU3/P4f8Avz/9lR/wgU3/AD+H/vz/APZU+ZGX9k4z+T8V/mcdRXY/8IFN/wA/h/78/wD2VH/CBTf8/h/78/8A2VHMg/snGfyfiv8AM46qz2Uct8l1KzP5YxHGfuoe7fWu6/4QKb/n8P8A35/+yo/4QKb/AJ/D/wB+f/sqOZFRyvGx2h+K/wAzhXskN+l4jNHKBtfb0kX0b6etWa7H/hApv+fw/wDfn/7Kj/hApv8An8P/AH5/+yougeV42Vrw281/mcdUUH/I16J/18x/+jBXbf8ACBTf8/h/78//AGVc9quivonjLw9E8vmebMjA7NuMSAeprmxbXsvuPo+EsvxNHNIzqRsuWfVfys92oooqD1wooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAM67/wBe3+ewqCp7v/Xt/nsKgrZbGT3CiiimAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFed+Of+R78Lf76/wDo0V6JXnfjn/ke/C3++v8A6NFYYn+H9x6uS/72vSX5M9cooooPPCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAzrv/AF7f57CoKuz2jSylhLtB7bai+wP/AM9//Ha1UlYzadyvRVj7A/8Az3/8do+wP/z3/wDHafMg5WV6KsfYH/57/wDjtH2B/wDnv/47RzIOVleirH2B/wDnv/47R9gf/nv/AOO0cyDlZXoqx9gf/nv/AOO0fYH/AOe//jtHMg5WV6KsfYH/AOe//jtH2B/+e/8A47RzIOVleirH2B/+e/8A47R9gf8A57/+O0cyDlZXoqx9gf8A57/+O0fYH/57/wDjtHMg5WV6KsfYH/57/wDjtH2B/wDnv/47RzIOVlevO/HP/I9+Fv8AfX/0aK9M+wP/AM9//Ha828fQmHx74WBfd869sf8ALVa58Q06f3Hq5Kn9bXpL8mes0UUVR5wUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFADSaTNDdfxpuaYh2aM03NGaAHZozTc0ZoAdmjNNzRmgB2aM03NGaAHZozTc0ZoAdmjNNzRmgB2aM03NGaAHZozTc0ZoAdmvLviJ/yP8A4V/31/8ARq16fmvL/iH/AMj/AOFf99f/AEatY1/gPVyb/evlL8meq0UUVqeWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBE/X8abmlk+9+NMzVIkdmjNNzRmmA7NGabmjNADs0ZpuaM0AOzRmm5ozQA7NGabmjNADs0ZpuaM0AOzRmm5ozQA7NGabmjNADs15j8Qv8AkfvC3++v/o1a9MzXmXxB/wCR+8Lf76/+jVrCv8B6uTf70vSX5M9WooorQ8wKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCCQ/MeO9Mz7CiiqEGfYUZ9hRRTEGfYUZ9hRRQAZ9hRn2FFFABn2FGfYUUUAGfYUZ9hRRQAZ9hRn2FFFABn2FGfYUUUAGfYUZ9hRRQAZ9hXnvji2Sbxr4dkYsGjZSMH/AKaD/Ciisa/wHp5R/vPyf5M9MoooqzzgooooAKKKKACiiigAooooA//Z" MaxResults="1" MinResults="[0]" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;cssselector&quot;: &quot; td:nth-child(3)&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(0)]">
+                                  <on:GetElement.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                                  </on:GetElement.Variables>
+                                  <ActivityAction x:TypeArguments="on:NMElement">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                    </ActivityAction.Argument>
+                                    <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[item.Text]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </ActivityAction>
+                                </on:GetElement>
+                                <on:GetElement Elements="{x:Null}" LoopAction="{x:Null}" WaitForReady="{x:Null}" From="[item]" sap2010:WorkflowViewState.IdRef="GetElement_13" Image="/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABkASwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigDm/+al5/wCoR/7WNdJXN/8ANSv+4R/7WNdJUQ6nRiPseiCiiirOcKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDm/8AmpX/AHCP/axrpK5v/mpX/cI/9rGukqI9ToxH2PRBRRRVnOFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBzf/ADUr/uEf+1jXSVzf/NSv+4R/7WNdJUR6nRiPseiCiiirOcKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDm/+alf9wj/2sa6Sub/5qV/3CP8A2sa6Soj1OjEfY9EFFFFWc4UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHN/81K/7hH/tY10lc3/zUr/uEf8AtY10lRHqdGI+x6IKKKKs5wooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAOb/5qV/3CP8A2sa6Sub/AOalf9wj/wBrGukqI9ToxH2PRBRRRVnOFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBz2wf8LF8zJz/ZOMdv9bXQ0UVMep0Yj7PogoooqjnCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z" MaxResults="1" MinResults="[0]" Selector="%[&#xD;&#xA;  {&#xD;&#xA;    &quot;cssselector&quot;: &quot; td:nth-child(4)&quot;&#xD;&#xA;  }&#xD;&#xA;]" Timeout="[TimeSpan.FromSeconds(0)]">
+                                  <on:GetElement.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                                  </on:GetElement.Variables>
+                                  <ActivityAction x:TypeArguments="on:NMElement">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="on:NMElement" Name="item" />
+                                    </ActivityAction.Argument>
+                                    <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[Diffrence]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[item.Text]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </ActivityAction>
+                                </on:GetElement>
+                                <ou:AddDataRow DataTable="[dt_Table]" sap2010:WorkflowViewState.IdRef="AddDataRow_1" RowData="[{name,tottal,result,diffrence}]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </on:GetElement>
+                          <ou:WriteExcel DataSet="{x:Null}" DataTable="[dt_Table]" Filename="[&quot;%USERPROFILE%\Desktop\output.xslx.xlsx&quot;]" sap2010:WorkflowViewState.IdRef="WriteExcel_1" Theme="None" includeHeader="True" />
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID5">
+                            <oi3:TakeScreenshot Element="{x:Null}" Height="147" Result="[outimage]" Width="641" X="983" Y="445">
+                              <oi3:TakeScreenshot.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+                              </oi3:TakeScreenshot.Variables>
+                              <ActivityAction x:TypeArguments="oi3:ImageElement">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="oi3:ImageElement" Name="item" />
+                                </ActivityAction.Argument>
+                                <WriteLine Text="[outimage.SaveAs(&quot;E:\Quadance Tech files\OpenRPA\MariasTask\out.png&quot;).ToString]" sap2010:WorkflowViewState.IdRef="WriteLine_6" />
+                              </ActivityAction>
+                              <sap2010:WorkflowViewState.IdRef>TakeScreenshot_2</sap2010:WorkflowViewState.IdRef>
+                            </oi3:TakeScreenshot>
+                            <sap2010:WorkflowViewState.IdRef>FlowStep_7</sap2010:WorkflowViewState.IdRef>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.True>
+            <FlowDecision.False>
+              <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="The Data Table is Empty" />
+              </FlowStep>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+    </Flowchart>
+    <sads1:DebugSymbol.Symbol>dw1DOlxFbXB0eS54YW1sAA==</sads1:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="DownloadFile_1" sap1:VirtualizedContainerService.HintSize="234.4,69.6" />
+      <sap2010:ViewStateData Id="ReadExcel_1" sap1:VirtualizedContainerService.HintSize="234.4,69.6" />
+      <sap2010:ViewStateData Id="Sequence_1" sap1:VirtualizedContainerService.HintSize="256.8,304">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_1" sap1:VirtualizedContainerService.HintSize="210.4,62.4" />
+      <sap2010:ViewStateData Id="Catch`1_1" sap1:VirtualizedContainerService.HintSize="403.2,22.4">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="TryCatch_1" sap1:VirtualizedContainerService.HintSize="200,52.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenURL_1" sap1:VirtualizedContainerService.HintSize="214.4,56" />
+      <sap2010:ViewStateData Id="Assign`1_1" sap1:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetElement_1" sap1:VirtualizedContainerService.HintSize="214.4,153.6" />
+      <sap2010:ViewStateData Id="Assign`1_2" sap1:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetElement_2" sap1:VirtualizedContainerService.HintSize="214.4,153.6" />
+      <sap2010:ViewStateData Id="ClickElement_1" sap1:VirtualizedContainerService.HintSize="200,36.8" />
+      <sap2010:ViewStateData Id="GetElement_3" sap1:VirtualizedContainerService.HintSize="214.4,168" />
+      <sap2010:ViewStateData Id="Sequence_2" sap1:VirtualizedContainerService.HintSize="200,52.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign`1_3" sap1:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetElement_4" sap1:VirtualizedContainerService.HintSize="214.4,153.6" />
+      <sap2010:ViewStateData Id="Assign`1_4" sap1:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetElement_5" sap1:VirtualizedContainerService.HintSize="214.4,153.6" />
+      <sap2010:ViewStateData Id="Assign`1_5" sap1:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetElement_6" sap1:VirtualizedContainerService.HintSize="214.4,153.6" />
+      <sap2010:ViewStateData Id="Assign`1_6" sap1:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="GetElement_7" sap1:VirtualizedContainerService.HintSize="214.4,153.6" />
+      <sap2010:ViewStateData Id="ClickElement_2" sap1:VirtualizedContainerService.HintSize="200,36.8" />
+      <sap2010:ViewStateData Id="GetElement_8" sap1:VirtualizedContainerService.HintSize="214.4,168" />
+      <sap2010:ViewStateData Id="Sequence_4" sap1:VirtualizedContainerService.HintSize="236.8,1067.2">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEachDataRow_1" sap1:VirtualizedContainerService.HintSize="251.2,1167.2" />
+      <sap2010:ViewStateData Id="Sequence_5" sap1:VirtualizedContainerService.HintSize="200,52.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CreateDataTable_1" sap1:VirtualizedContainerService.HintSize="316.8,102.4" />
+      <sap2010:ViewStateData Id="Assign_1" sap1:VirtualizedContainerService.HintSize="243.2,60" />
+      <sap2010:ViewStateData Id="Sequence_6" sap1:VirtualizedContainerService.HintSize="265.6,184.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetElement_9" sap1:VirtualizedContainerService.HintSize="280,316">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_2" sap1:VirtualizedContainerService.HintSize="243.2,60" />
+      <sap2010:ViewStateData Id="GetElement_10" sap1:VirtualizedContainerService.HintSize="280,191.2">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_3" sap1:VirtualizedContainerService.HintSize="243.2,60" />
+      <sap2010:ViewStateData Id="GetElement_12" sap1:VirtualizedContainerService.HintSize="280,191.2" />
+      <sap2010:ViewStateData Id="Assign_4" sap1:VirtualizedContainerService.HintSize="243.2,60" />
+      <sap2010:ViewStateData Id="GetElement_13" sap1:VirtualizedContainerService.HintSize="280,191.2" />
+      <sap2010:ViewStateData Id="AddDataRow_1" sap1:VirtualizedContainerService.HintSize="280,102.4" />
+      <sap2010:ViewStateData Id="Sequence_7" sap1:VirtualizedContainerService.HintSize="302.4,1276.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetElement_11" sap1:VirtualizedContainerService.HintSize="316.8,1408" />
+      <sap2010:ViewStateData Id="WriteExcel_1" sap1:VirtualizedContainerService.HintSize="316.8,69.6" />
+      <sap2010:ViewStateData Id="Sequence_8" sap1:VirtualizedContainerService.HintSize="200,52.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_6" sap1:VirtualizedContainerService.HintSize="210.4,62.4" />
+      <sap2010:ViewStateData Id="TakeScreenshot_2" sap1:VirtualizedContainerService.HintSize="200,36.8" />
+      <sap2010:ViewStateData Id="FlowStep_7">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">15,556.52</av:Point>
+            <av:Size x:Key="ShapeSize">200,36.8</av:Size>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_5">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">15,453.72</av:Point>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">115,506.52 115,556.52</av:PointCollection>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_4">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">15,350.92</av:Point>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">115,403.72 115,453.72</av:PointCollection>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_1">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">15,248.12</av:Point>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">115,300.92 115,350.92</av:PointCollection>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_2" sap1:VirtualizedContainerService.HintSize="210.4,62.4">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_2">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">385.4,243.12</av:Point>
+            <av:Size x:Key="ShapeSize">210.4,62.4</av:Size>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowDecision_1" sap1:VirtualizedContainerService.HintSize="70.4,87.2">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">265,230.5</av:Point>
+            <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
+            <av:PointCollection x:Key="FalseConnector">335.4,274.1 365.4,274.1 365.4,274.32 385.4,274.32</av:PointCollection>
+            <av:PointCollection x:Key="TrueConnector">265,274.1 235,274.1 235,274.52 215,274.52</av:PointCollection>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_3">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,127.7</av:Point>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,180.5 300,210.5 300.2,210.5 300.2,230.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap1:VirtualizedContainerService.HintSize="614.4,636.8">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,127.7</av:PointCollection>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_3" sap1:VirtualizedContainerService.HintSize="636.8,761.6">
+        <sap1:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap1:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="New_Workflow_1" sap1:VirtualizedContainerService.HintSize="676.8,841.6" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
